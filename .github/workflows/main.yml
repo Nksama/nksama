@@ -1,0 +1,32 @@
+name: Readme updater
+
+# Controls when the action will run. Triggers every 5 min.
+on:
+  schedule:
+    - cron:  '0 1 0 ? * * *'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Python
+      uses: actions/setup-python@v2
+      with:
+       python-version: 3.8
+    - name: Install requirements
+      run: |
+        python -m pip install requests
+    - name: Something nice
+      run: |
+        python anilist.py
+    - name: Commit
+      run: |
+        git config --global user.email "f36@users.noreply.github.com"
+        git config --global user.name "f36"
+        git add -A
+        git commit -m "Update favorites" || exit 0
+        git push
