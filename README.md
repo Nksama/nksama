@@ -31,4 +31,4 @@ class Skills extends SoftwareDeveloper {
 }
 ```
 
-From [UT](https://www.utoronto.ca)
+
