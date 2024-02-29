@@ -6,9 +6,7 @@
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Nksama&hide=dockerfile)](https://github.com/Nksama)
 
 
-![Profile views](https://gpvc.arturio.dev/nksama)
-
-- 🔭 I’m currently working on [Nksama](https://t.me/Nksamax)
+- 🔭 I’m currently working on [Nksama](https://t.me/Nksama)
 
 
 
